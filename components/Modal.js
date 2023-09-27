@@ -8,8 +8,10 @@ const Modal = ({ children, isOpen, onClose }) => {
  return(
     createPortal(<div className='modal'>
       {children}
-      <div style={{ backgroundColor: 'white', padding: '2rem', position: 'relative' }} onClick={(e) => e.stopPropagation()} >// This prevents the modal from closing when clicking inside
-   //add code here
+      <div style={{ backgroundColor: 'white', padding: '2rem', position: 'relative' }} onClick={(e) => {
+        e.stopPropagation()
+        onClose(false)
+      }} >
       </div>
     </div>,
     document.body)
