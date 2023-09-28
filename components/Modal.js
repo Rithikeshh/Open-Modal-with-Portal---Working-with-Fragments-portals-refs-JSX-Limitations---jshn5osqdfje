@@ -11,7 +11,8 @@ const Modal = ({ children, isOpen, onClose }) => {
       <div style={{ backgroundColor: 'white', padding: '2rem', position: 'relative' }} onClick={(e) => {
         e.stopPropagation()
         onClose(null)
-      }} >
+      }} >// This prevents the modal from closing when clicking inside
+   //add code here
       </div>
     </div>,
     document.body)
