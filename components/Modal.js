@@ -10,7 +10,7 @@ const Modal = ({ children, isOpen, onClose }) => {
       {children}
       <div style={{ backgroundColor: 'white', padding: '2rem', position: 'relative' }} onClick={(e) => {
         e.stopPropagation()
-        onClose(false)
+        onClose(null)
       }} >
       </div>
     </div>,
