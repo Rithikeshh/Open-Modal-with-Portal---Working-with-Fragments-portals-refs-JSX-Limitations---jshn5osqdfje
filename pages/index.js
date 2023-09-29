@@ -3,19 +3,19 @@ import Modal from '../components/Modal';
 
 const HomePage = () => {
   
-  const [isOpen, setIsOpen] = useState(null);
+  const [isOpen, setIsOpen] = useState(false);
   return (
     <div>
       <button onClick={()=>{
-        setIsOpen('true')
+        setIsOpen(true)
       }}>Open Modal</button>
 
-      <Modal isOpen={isOpen} onClose={setIsOpen}>
+      <Modal isOpen={isOpen} onClose={()=>{
+        setIsOpen(false)
+      }}>
         <h2>This is a Modal</h2>
         <p>Using React Portals with Next.js</p>
-        <button onClick={()=>{
-          setIsOpen(null)
-        }}>Close Modal</button>
+        
       </Modal>
     </div>
   );
